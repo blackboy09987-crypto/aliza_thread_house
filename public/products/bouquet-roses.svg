@@ -1,0 +1,31 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#FBF4E9"/>
+  <path d="M150 400 L120 260 L280 260 L250 400 Z" fill="#C17A54" opacity="0.85"/>
+  <path d="M150 400 L130 270 L270 270 L250 400 Z" fill="#A2603E" opacity="0.5"/>
+
+  <g stroke="#667352" stroke-width="4" fill="none">
+    <path d="M160 270 L150 170"/>
+    <path d="M200 270 L200 150"/>
+    <path d="M240 270 L250 170"/>
+    <path d="M180 270 L165 195"/>
+    <path d="M220 270 L235 195"/>
+  </g>
+
+  <g id="rose">
+    <circle r="26" fill="#C98C99"/>
+    <path d="M0 0 m0 -22 a22 22 0 0 1 22 22 a17 17 0 0 1 -17 17 a13 13 0 0 1 -13 -13 a9 9 0 0 1 9 -9 a5 5 0 0 1 5 5" fill="none" stroke="#A8677A" stroke-width="2.5"/>
+  </g>
+  <use href="#rose" transform="translate(150,170)"/>
+  <use href="#rose" transform="translate(200,150) scale(1.15)" fill="#C9A24B"/>
+  <use href="#rose" transform="translate(250,170)"/>
+  <use href="#rose" transform="translate(165,195) scale(0.85)"/>
+  <use href="#rose" transform="translate(235,195) scale(0.85)"/>
+
+  <circle cx="200" cy="150" r="26" fill="#C17A54"/>
+  <path d="M200 150 m0 -22 a22 22 0 0 1 22 22 a17 17 0 0 1 -17 17 a13 13 0 0 1 -13 -13 a9 9 0 0 1 9 -9 a5 5 0 0 1 5 5" fill="none" stroke="#A2603E" stroke-width="2.5"/>
+
+  <g fill="#8A9A78">
+    <ellipse cx="130" cy="220" rx="10" ry="18" transform="rotate(-30 130 220)"/>
+    <ellipse cx="270" cy="220" rx="10" ry="18" transform="rotate(30 270 220)"/>
+  </g>
+</svg>

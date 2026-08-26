@@ -1,0 +1,19 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#F1DDE1"/>
+  <g transform="translate(200,210)">
+    <path d="M-95 -70 L-60 -95 L-25 -75 L-25 -110 L25 -110 L25 -75 L60 -95 L95 -70 L70 -20 L45 -35 L45 110 L-45 110 L-45 -35 L-70 -20 Z"
+          fill="#FBF4E9" stroke="#E8D7BD" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M-25 -75 Q0 -60 25 -75" fill="none" stroke="#E8D7BD" stroke-width="4"/>
+    <line x1="0" y1="-55" x2="0" y2="105" stroke="#E8D7BD" stroke-width="3"/>
+    <circle cx="0" cy="-25" r="6" fill="#C17A54"/>
+    <circle cx="0" cy="10" r="6" fill="#C17A54"/>
+    <circle cx="0" cy="45" r="6" fill="#C17A54"/>
+    <g stroke="#E8D7BD" stroke-width="2" fill="none" opacity="0.8">
+      <path d="M-45 -10 Q-20 -4 5 -10 Q30 -4 45 -10"/>
+      <path d="M-45 15 Q-20 21 5 15 Q30 21 45 15"/>
+      <path d="M-45 40 Q-20 46 5 40 Q30 46 45 40"/>
+      <path d="M-45 65 Q-20 71 5 65 Q30 71 45 65"/>
+      <path d="M-45 90 Q-20 96 5 90 Q30 96 45 90"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#F6EAD6"/>
+  <circle cx="200" cy="200" r="150" fill="#FBF4E9" stroke="#A2603E" stroke-width="14"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#C17A54" stroke-width="4" stroke-dasharray="2 10"/>
+
+  <path d="M120 160 Q200 140 280 160" fill="none" stroke="#8A9A78" stroke-width="3"/>
+  <g fill="#C98C99">
+    <circle cx="130" cy="160" r="5"/>
+    <circle cx="165" cy="149" r="5"/>
+    <circle cx="235" cy="149" r="5"/>
+    <circle cx="270" cy="160" r="5"/>
+  </g>
+
+  <text x="200" y="225" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="46" fill="#A8677A">Aliza</text>
+  <path d="M110 235 Q200 260 290 235" fill="none" stroke="#C98C99" stroke-width="3" stroke-dasharray="1 8" stroke-linecap="round"/>
+
+  <path d="M120 250 Q200 275 280 250" fill="none" stroke="#8A9A78" stroke-width="3"/>
+  <g fill="#C9A24B">
+    <circle cx="135" cy="252" r="5"/>
+    <circle cx="200" cy="264" r="5"/>
+    <circle cx="265" cy="252" r="5"/>
+  </g>
+
+  <circle cx="200" cy="60" r="6" fill="#A2603E"/>
+  <path d="M200 66 L200 50" stroke="#A2603E" stroke-width="3"/>
+</svg>

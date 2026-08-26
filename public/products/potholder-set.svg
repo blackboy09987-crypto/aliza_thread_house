@@ -1,0 +1,23 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#FBF4E9"/>
+  <g transform="translate(150,190) rotate(-8)">
+    <rect x="-70" y="-70" width="140" height="140" rx="14" fill="#F6EAD6" stroke="#C17A54" stroke-width="4"/>
+    <g fill="#C17A54">
+      <rect x="-70" y="-70" width="140" height="18"/>
+      <rect x="-70" y="-30" width="140" height="18"/>
+      <rect x="-70" y="10" width="140" height="18"/>
+      <rect x="-70" y="50" width="140" height="18"/>
+    </g>
+    <circle cx="0" cy="-90" r="10" fill="none" stroke="#A2603E" stroke-width="5"/>
+  </g>
+  <g transform="translate(250,220) rotate(6)">
+    <rect x="-70" y="-70" width="140" height="140" rx="14" fill="#F1DDE1" stroke="#A8677A" stroke-width="4"/>
+    <g fill="#C98C99">
+      <rect x="-70" y="-70" width="140" height="18"/>
+      <rect x="-70" y="-30" width="140" height="18"/>
+      <rect x="-70" y="10" width="140" height="18"/>
+      <rect x="-70" y="50" width="140" height="18"/>
+    </g>
+    <circle cx="0" cy="-90" r="10" fill="none" stroke="#A8677A" stroke-width="5"/>
+  </g>
+</svg>

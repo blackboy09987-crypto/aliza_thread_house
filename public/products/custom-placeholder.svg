@@ -1,0 +1,11 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#F1DDE1"/>
+  <circle cx="200" cy="190" r="140" fill="#FBF4E9" stroke="#A2603E" stroke-width="14" stroke-dasharray="6 10"/>
+
+  <path d="M120 250 L260 130" stroke="#C9C0C4" stroke-width="4"/>
+  <circle cx="260" cy="130" r="7" fill="none" stroke="#8A8085" stroke-width="4"/>
+  <path d="M120 250 Q160 210 150 170 Q170 190 200 175" stroke="#C98C99" stroke-width="3" fill="none" stroke-dasharray="1 7" stroke-linecap="round"/>
+
+  <text x="200" y="285" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="30" fill="#A8677A">your idea</text>
+  <text x="200" y="315" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="30" fill="#8A9A78">here</text>
+</svg>

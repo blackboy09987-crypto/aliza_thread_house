@@ -1,0 +1,16 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#F1DDE1"/>
+  <circle cx="200" cy="70" r="20" fill="none" stroke="#B0B0B0" stroke-width="7"/>
+  <path d="M200 90 L200 130" stroke="#9A9A9A" stroke-width="5"/>
+
+  <g transform="translate(200,215) rotate(-4)">
+    <rect x="-110" y="-40" width="220" height="80" rx="10" fill="#A31E2E"/>
+    <text x="0" y="-2" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="30" fill="#F6EAD6" letter-spacing="2">NAME</text>
+    <text x="0" y="28" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="22" fill="#F6EAD6" letter-spacing="4">HERE</text>
+  </g>
+  <g transform="translate(200,300) rotate(3)">
+    <rect x="-95" y="-32" width="190" height="64" rx="10" fill="#F1C9D2"/>
+    <text x="0" y="8" text-anchor="middle" font-family="Georgia, serif" font-weight="bold" font-size="20" fill="#8A4E5C" letter-spacing="2">Custom Name</text>
+  </g>
+  <circle cx="270" cy="255" r="16" fill="#8A9A78"/>
+</svg>
