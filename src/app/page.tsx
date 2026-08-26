@@ -7,6 +7,10 @@ import { CATEGORY_ICONS } from "@/components/icons";
 import { getFeaturedProducts } from "@/lib/products";
 import { CATEGORIES } from "@/lib/categories";
 
+// Render at request time — prerendering this at build time would make every
+// deploy depend on the database being reachable during the build step.
+export const dynamic = "force-dynamic";
+
 const VALUE_PROPS = [
   {
     title: "Made by hand, to order",
