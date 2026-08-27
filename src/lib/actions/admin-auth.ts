@@ -11,13 +11,18 @@ export async function loginAdmin(
   formData: FormData
 ): Promise<AdminLoginState> {
   const password = String(formData.get("password") || "");
+  const plainPassword = process.env.ADMIN_PASSWORD;
   const hash = process.env.ADMIN_PASSWORD_HASH;
 
-  if (!hash) {
-    return { error: "Admin login is not configured. Set ADMIN_PASSWORD_HASH." };
+  let valid = false;
+  if (plainPassword) {
+    valid = password === plainPassword;
+  } else if (hash) {
+    valid = await bcrypt.compare(password, hash);
+  } else {
+    return { error: "Admin login is not configured. Set ADMIN_PASSWORD." };
   }
 
-  const valid = await bcrypt.compare(password, hash);
   if (!valid) {
     return { error: "Incorrect password." };
   }
