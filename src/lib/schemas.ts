@@ -56,3 +56,12 @@ export const productFormSchema = z.object({
 });
 
 export type ProductFormInput = z.infer<typeof productFormSchema>;
+
+export const reviewSchema = z.object({
+  customerName: z.string().min(1, "Name is required").max(100),
+  rating: z.coerce.number().int().min(1, "Pick a rating").max(5),
+  comment: z.string().min(10, "Tell us a bit more about your experience").max(1000),
+  productId: z.string().optional(),
+});
+
+export type ReviewInput = z.infer<typeof reviewSchema>;

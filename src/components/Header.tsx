@@ -10,6 +10,7 @@ import { CartIcon } from "@/components/icons";
 const NAV_LINKS = [
   { href: "/shop", label: "Shop" },
   { href: "/custom-order", label: "Custom Orders" },
+  { href: "/reviews", label: "Reviews" },
   { href: "/about", label: "About" },
 ];
 

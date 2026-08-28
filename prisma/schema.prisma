@@ -51,6 +51,7 @@ model Product {
   updatedAt   DateTime @updatedAt
 
   orderItems OrderItem[]
+  reviews    Review[]
 }
 
 model Order {
@@ -98,4 +99,17 @@ model CustomOrderRequest {
   referenceNote String?
   status        CustomRequestStatus  @default(NEW)
   createdAt     DateTime             @default(now())
+}
+
+model Review {
+  id            String    @id @default(cuid())
+  customerName  String
+  rating        Int // 1-5
+  comment       String
+  productId     String?
+  product       Product?  @relation(fields: [productId], references: [id], onDelete: SetNull)
+  isApproved    Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+
+  @@index([isApproved])
 }
