@@ -57,8 +57,8 @@ export default async function CheckoutSuccessPage({
             <div className="mx-auto mt-6 max-w-md rounded-xl border border-cream-line bg-cream-soft p-5 text-left text-sm text-ink-soft">
               <p className="font-medium text-ink">Complete your payment</p>
               <p className="mt-1">
-                Send {formatPrice(total)} via EasyPaisa or JazzCash, then share your payment
-                screenshot on WhatsApp so Aliza can confirm your order.
+                Send {formatPrice(total)} via {PAYMENT_METHODS.map((m) => m.name).join(" or ")},
+                then share your payment screenshot on WhatsApp so Aliza can confirm your order.
               </p>
               <ul className="mt-3 space-y-1">
                 {PAYMENT_METHODS.map((method) => (
