@@ -25,11 +25,12 @@ export async function submitReview(
     return { status: "error", message: parsed.error.issues[0]?.message ?? "Please check the form." };
   }
 
-  await prisma.review.create({ data: parsed.data });
+  await prisma.review.create({ data: { ...parsed.data, isApproved: true } });
+  revalidatePath("/reviews");
 
   return {
     status: "success",
-    message: "Thank you! Your review will appear once Aliza approves it.",
+    message: "Thank you! Your review is now live.",
   };
 }
 
