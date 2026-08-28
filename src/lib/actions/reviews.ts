@@ -38,15 +38,6 @@ async function requireAdmin() {
   if (!(await isAdminAuthenticated())) throw new Error("Unauthorized");
 }
 
-export async function approveReview(formData: FormData) {
-  await requireAdmin();
-  const id = String(formData.get("id") || "");
-  if (!id) return;
-  await prisma.review.update({ where: { id }, data: { isApproved: true } });
-  revalidatePath("/admin/reviews");
-  revalidatePath("/reviews");
-}
-
 export async function deleteReview(formData: FormData) {
   await requireAdmin();
   const id = String(formData.get("id") || "");
