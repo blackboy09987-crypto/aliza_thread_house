@@ -118,7 +118,7 @@ export default function ImageGalleryField({
       )}
 
       <label className="flex flex-col gap-1 text-sm text-ink-soft">
-        Add photos (JPG, PNG, WEBP — max 5MB each)
+        Add photos (JPG, PNG, WEBP — max 2MB each)
         <input
           ref={fileInputRef}
           type="file"

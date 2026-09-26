@@ -2,9 +2,6 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { randomUUID } from "node:crypto";
-import { mkdir, writeFile } from "node:fs/promises";
-import { join } from "node:path";
 import { prisma } from "@/lib/prisma";
 import { isAdminAuthenticated } from "@/lib/auth";
 import { productFormSchema } from "@/lib/schemas";
@@ -23,13 +20,14 @@ const CATEGORY_PLACEHOLDER: Record<string, string> = {
   CUSTOM: "/products/custom-placeholder.svg",
 };
 
-const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
-const ALLOWED_TYPES: Record<string, string> = {
-  "image/jpeg": "jpg",
-  "image/png": "png",
-  "image/webp": "webp",
-  "image/gif": "gif",
-};
+// Vercel's deployed functions run on a read-only filesystem (only /tmp is
+// writable, and it's wiped between invocations and never served publicly),
+// so uploaded photos can't be saved to disk like in local dev. Instead we
+// store them as base64 data URLs directly in the database — no extra
+// storage service to set up. Keep the limit modest since these bytes ride
+// along on every page load that shows the image.
+const MAX_UPLOAD_BYTES = 2 * 1024 * 1024;
+const ALLOWED_TYPES = new Set(["image/jpeg", "image/png", "image/webp", "image/gif"]);
 
 async function requireAdmin() {
   const authed = await isAdminAuthenticated();
@@ -40,21 +38,14 @@ async function requireAdmin() {
 
 async function saveUploadedImage(file: File): Promise<string> {
   if (file.size > MAX_UPLOAD_BYTES) {
-    throw new Error("Image is too large (max 5MB).");
+    throw new Error("Image is too large (max 2MB).");
   }
-  const ext = ALLOWED_TYPES[file.type];
-  if (!ext) {
+  if (!ALLOWED_TYPES.has(file.type)) {
     throw new Error("Image must be a JPG, PNG, WEBP, or GIF file.");
   }
 
-  const uploadsDir = join(process.cwd(), "public", "uploads");
-  await mkdir(uploadsDir, { recursive: true });
-
-  const filename = `${randomUUID()}.${ext}`;
   const bytes = Buffer.from(await file.arrayBuffer());
-  await writeFile(join(uploadsDir, filename), bytes);
-
-  return `/uploads/${filename}`;
+  return `data:${file.type};base64,${bytes.toString("base64")}`;
 }
 
 function parseForm(formData: FormData) {
